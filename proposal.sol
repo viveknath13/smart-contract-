@@ -16,5 +16,10 @@ contract proposalContract{
     }
 
     mapping(uint256 => Proposal) proposal_history; // Recordings of previous proposals
+
+    function createVote(string calldata _Description, string calldata _tittle, uint256 _totalVoteToEnd)public {
+        count+=1;
+        proposal[count] = Proposal(_Description, _tittle,0,0,0,_totalVoteToEnd,false,true);
+    }
 }
 
